@@ -1,0 +1,14 @@
+name: 'Test Repository Archive Action'
+
+on:
+  push:
+
+jobs:
+  test-action-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout Repository'
+        uses: actions/checkout@v4
+
+      - name: 'Run Repository Archive Action'
+        uses: berkayy-atas/compress-ts@latest
